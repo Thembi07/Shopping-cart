@@ -1,0 +1,33 @@
+<div class="center">
+    <div class="from">
+        <div class="imgcontainer">
+            <img src="/assets/img/img_avatar2.png" alt="Avatar" class="avatar">
+        </div>
+
+
+        <label for="uname"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" [(ngModel)]="email" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" [(ngModel)]="password" required>
+
+        <button type="submit" (click)="login()">Login</button>
+        <button type="submit" (click)="register()">Register</button>
+        <div class="col">
+            <div class="fb btn" (click)="loginWithFacebook()">
+                <i class="fa fa-facebook fa-fw"></i>
+            </div>
+            <div class="phone btn" (click)="phone()">
+                <i class="fa fa-phone fa-fw"></i>
+            </div>
+            <div class="google btn" (click)="loginWithGoogle()">
+                <i class="fa fa-google fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<router-outlet>
+</router-outlet>

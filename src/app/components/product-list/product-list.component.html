@@ -1,0 +1,49 @@
+<ng-container>
+
+    <app-cart></app-cart>
+    <mat-card class="example-card">
+        <mat-card-header>
+            <mat-card-title>
+                Total: {{ total | currency:'R':'symbol':'1.2-2' }}</mat-card-title>
+        </mat-card-header>
+
+        <mat-card-actions>
+            <mat-chip-list>
+                <mat-chip *ngFor="let item of cartList" [removable]="true" (removed)="removeItemFromCart(item)">
+                    {{ item.name }}
+                    <mat-icon matChipRemove>cancel</mat-icon>
+                </mat-chip>
+            </mat-chip-list>
+        </mat-card-actions>
+    </mat-card>
+
+    <div class="row">
+        <div class="column" *ngFor="let item of products">
+            <mat-card>
+                <mat-card-header>
+
+                    <mat-card-title>
+                        {{ item.name }}
+                    </mat-card-title>
+
+                    <mat-card-subtitle>
+                        {{ item.price | currency:'R':'symbol':'1.2-2' }}
+                    </mat-card-subtitle>
+
+                </mat-card-header>
+                <!-- <img mat-card-image [src]="item.image" [alt]="image"> -->
+
+                <mat-card-actions>
+
+                    <button mat-button color="primary" role="button" (click)="addItemToCart(item)">
+
+                    <mat-icon>add_shopping_cart</mat-icon>  Add to cart
+                   
+                </button>
+
+                </mat-card-actions>
+            </mat-card>
+
+        </div>
+    </div>
+</ng-container>

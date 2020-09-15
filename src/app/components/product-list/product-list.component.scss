@@ -1,0 +1,40 @@
+.example-card {
+    max-width: 400px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 1650px) {
+    .column {
+        float: left;
+        width: 33.33%;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .column {
+        float: left;
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        float: left;
+        width: 100%;
+    }
+}

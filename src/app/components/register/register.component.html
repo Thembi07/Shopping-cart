@@ -1,0 +1,28 @@
+<div class="center">
+
+    <div class="form">
+        <div class="register">
+            Register
+        </div>
+        <div class="imgcontainer">
+
+            <img src="/assets/img/img_avatar2.png" alt="Avatar" class="avatar">
+        </div>
+
+
+        <label for="uname"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" [(ngModel)]="email" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" [(ngModel)]="password" required>
+
+        <button type="submit" (click)="register()">Register</button>
+
+        <button type="submit" (click)="login()">Login</button>
+    </div>
+</div>
+
+
+
+<router-outlet>
+</router-outlet>

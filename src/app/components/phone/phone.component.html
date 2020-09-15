@@ -1,0 +1,30 @@
+<div class="center">
+    <div class="from">
+        <div class="imgcontainer">
+            <img src="/assets/img/img_avatar2.png" alt="Avatar" class="avatar">
+        </div>
+
+
+        <label for="uname"><b>Phone</b></label>
+        <input type="text" placeholder="+2711155551" maxlength="12" [(ngModel)]="phoneNumber.number" required>
+
+        <button type="submit" (click)="sendLoginCode()">Login with phone number</button>
+        <button type="submit" (click)="login()">Login</button>
+
+        <div id="recaptcha-container"></div>
+        <div *ngIf="windowRef.confirmationResult">
+            <hr>
+            <label for="uname"><b>Enter your Verification Code Here</b></label>
+            <input type="text" placeholder="Enter Verification Code" [(ngModel)]="verificationCode" required>
+
+            <button type="submit" (click)="verifyLoginCode()">Verify</button>
+
+        </div>
+
+    </div>
+</div>
+
+
+
+<router-outlet>
+</router-outlet>
